@@ -17,25 +17,23 @@ The biggest drawback in utilizing the microbit as a sensor came about with how q
 data sets. Finding an appropriate balance where the end data was manageable while not missing any particular 
 'event'. The solution came about just by trial and error, just to ensure the sleep cycle did not interfere 
 between the speed the photoresistor comparison needs to happen in versus the tilt changes.
-![Image](
+
+
+
 ### **Accelerometer**
 The microbit accelerometer is used to identify the angles at which the microbit has shifted. 
 Using this tool one can see if the package has surpassed a designated angle. Unlike a normal 
 tilt indicator, utilizing a microbit for this shows for how long the package was kept above 
 a certain angle, and if it ever reached angles surpassing the limits of standard tilt indicators.
+![Image](Negative.jpg)
 
 ### **Data**
+
+![Image](Shaking.jpg)
+
 Even though the microbit offers very little data storage, the data storage simplicity as a CSV 
 (comma seperated variables), mean it is easy and quickly integrated into a MySQL database, or 
 even analyzed just using Microsoft Excel.
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and 
-
 
 
 To return to my profile page [Click Here](https://frantzl-cyber.github.io/FL_portfolio/).
