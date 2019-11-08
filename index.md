@@ -35,5 +35,28 @@ Even though the microbit offers very little data storage, the data storage simpl
 (comma seperated variables), mean it is easy and quickly integrated into a MySQL database, or 
 even analyzed just using Microsoft Excel.
 
+```Code
+while True:
+    calibrationVal = pin2.read_analog() 
+    #calibrates the photosensor during the cycle
+    
+    sleep(5000) #creates a buffer, done after the calibration to lengthen the time 
+    #between when the reading is taken and compared, also reduces the amount of 
+    #accelerometer readings to save on memeory
+    
+    print(accelerometer.get_values()) #prints the values that are then saved in MU on the plotter
+    acc = str(accelerometer.get_values())    
+    file.write(acc) #writes the accelerometer readings to the travel_data.txt
+    
+    #radio.send(accelerometer.get_values()) #messed around for sending the values 
+    #to a remote device, but did not have a receiver to validate functionality
+             
+    lightVal = pin2.read_analog() #receives a new light value from pin 2
+```
+Being able to transmit the readings to another device could greatly improve the viability of the device.
+The ability for these devices to transmit the information outside of the package while remaining inside 
+could give both the customer and the shipping provider more piece of mind. It would also identify the 
+exact point of failure in the packages delivery, so measures could be taken to avoid them. 
+
 
 To return to my profile page [Click Here](https://frantzl-cyber.github.io/FL_portfolio/).
